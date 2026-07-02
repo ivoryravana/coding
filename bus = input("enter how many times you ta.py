@@ -1,0 +1,40 @@
+bus = float(input("enter how many times you take the bus in a day: "))
+computer = float(input("enter how many hours do you use the computer in a day: "))
+showers = float(input("enter how many showers do you take in a day: "))
+stove = input("what kind of stove do you have (induction, electric, gas)? ").strip().lower()
+meals = float(input("enter how many meals do you cook in a day: "))
+cartype = input("what type of car do you have (electric, hybrid, gas)? ").strip().lower()
+caruse = float(input("how many miles do you drive in a day: "))
+light = float(input("how many hours do you use lights in a day: "))
+ac = float(input("how many hours do you use air conditioning in a day: "))
+plane = float(input("how many times do you take a plane in a year: "))
+ferry = float(input("how many times do you take a ferry on foot in a day: "))
+ferrycar = float(input("how many times do you take a ferry in a car in a day: "))
+lightrail = float(input("how many times do you take a light rail in a day: "))
+
+carbon = 0.0
+carbon += bus * 1.6
+carbon += computer * 0.132
+carbon += showers * 2.64
+if stove == "induction":
+    carbon += meals * 0.396
+elif stove == "electric":
+    carbon += meals * 0.66
+elif stove == "gas":
+    carbon += meals * 0.992
+
+if cartype == "electric":
+    carbon += caruse * 0.30
+elif cartype == "hybrid":
+    carbon += caruse * 0.55
+elif cartype == "gas":
+    carbon += caruse * 0.88
+
+carbon += light * 0.045
+carbon += ac * 2.5
+carbon += plane * 13.88
+carbon += ferry * 0.875
+carbon += ferrycar * 2.33
+carbon += lightrail * 3.0
+
+print("Your total carbon footprint is: " + str(carbon) + " lbs CO2e per day.")
