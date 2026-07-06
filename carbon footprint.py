@@ -53,7 +53,7 @@ if carbon < 50:
 elif carbon > 50 and carbon < 100:
     print("Your carbon footprint is moderate. Consider making some changes to reduce it.")
 
-elif carbon > 200 and carbon < 100000000000000000000000000000000000000000000000:
+elif carbon > 100 and carbon < 1000:
     print("Your carbon footprint is the highest ive ever seen. turn off everything and go live in the woods.")
 if carbon == 0.0:
     print("Your carbon footprint is zero. You are clearly lying. Get a job and stop living in your parents basement.")
