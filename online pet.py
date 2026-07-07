@@ -12,7 +12,7 @@ print("the stats all have a max of 100 and a min of 0")
 print()
 print()
 print("good luck!")
-time.sleep(5)
+time.sleep(3)
 score = 0
 days = 0
 hunger = 80
